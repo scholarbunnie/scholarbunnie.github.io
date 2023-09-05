@@ -7,30 +7,28 @@ let sum = 0
 let avg = 0
 let product = 1
 
-// clears the inputs and the text area
 btnClear.addEventListener('click', () => {
     for (let x = 0; x < numbers.length; x++) {
         numbers[x].value = ""
+        textArea.innerText = ""
     }
-    textArea.innerText = ""
 })
 
 btnSubmit.addEventListener('click', () => {
     for (let x = 0; x < numbers.length; x++) {
-        // checks for if input is just one number/ spaces inbetween numbers makes it invalid input.
+        // checks for if input is numbers
         if (numbers[x].value.trim() && !isNaN(+numbers[x].value)) {
             numList.push(+numbers[x].value)
         }
-        // gives error message if there is invalid input but does not clear the form to allow user to correct their input
         else {
-            textArea.innerText = "Please enter only numbers. Thank you! :)"
+            textArea.innerText = "Please enter valid numbers. Thank you! :)"
             numList = []
             break
         }
     }
     if (numList.length == numbers.length) {
         computeValues()
-        // spreads the array so that the min and max functions can see all the numbers without needing to iterate through a for loop.
+        console.log(...numList)
         let smallest = Math.min(...numList)
         let largest = Math.max(...numList)
         textArea.innerHTML = `The sum of all the numbers is ${sum}<br>
@@ -41,7 +39,6 @@ btnSubmit.addEventListener('click', () => {
     }
 });
 
-// This puts the math in the same function to be done at one time in a for loop
 function computeValues() {
     for (let x = 0; x < numList.length; x++){
         sum += numList[x]

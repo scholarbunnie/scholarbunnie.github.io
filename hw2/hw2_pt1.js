@@ -25,5 +25,3 @@ thirdText.style = `
     font-size:16pt`
 
 partOne.prepend(firstText, secondText, thirdText)
-
-// Part 2
