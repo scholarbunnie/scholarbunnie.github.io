@@ -3,13 +3,28 @@
 body {
     margin: 40px auto;
     font-family: 'Comfortaa', cursive;
-    color: white;
+    color: rgb(255, 196, 247);
     text-align: center;
     max-width: 500px;
     border-color: white;
     border-width: 8px;
     border-style: double;
     background-color: rgb(48, 48, 48);
+}
+
+table, th, td {
+    border-color: white;
+    border-collapse: collapse;
+    border-width: .1rem;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    color: rgb(255, 91, 233);
+    text-shadow: 
+        0 0 4px rgb(255, 91, 233);
 }
 
 header {
