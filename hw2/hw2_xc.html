@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheet.css">
-    <script src="hw2.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <script src="hw2_xc.js" defer></script>
     <title>Homework 2 - Extra Credit</title>
-</head>
-<body>
-    <header><h2>Part 2</h2></header>
-    <a href="hw2_pt1.html">Part 1</a>
-    <a href="hw2_pt2.html">Part 2</a>
-    <p><a href="hw2.html">Back</a></p>
-</body>
+  </head>
+  <body>
+    <header><h2>Extra Credit</h2></header>
+    <p id="message"></p>
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Rate</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Euro</td>
+            <td class="rate">0.84</td>
+            <td class="currency" id="Europe"></td>
+        </tr>
+        <tr>
+            <td>Canadian Dollar</td>
+            <td class="rate">1.23</td>
+            <td class="currency" id="Canada"></td>
+        </tr>
+        <tr>
+            <td>Hong Kong Dollar</td>
+            <td class="rate">7.76</td>
+            <td class="currency" id="Hong Kong"></td>
+        </tr>
+        <tr>
+            <td>Japanese Yen</td>
+            <td class="rate">110.80</td>
+            <td class="currency" id="Japan"></td>
+        </tr>
+        <tr>
+            <td>Mexican Peso</td>
+            <td class="rate">19.82</td>
+            <td class="currency" id="Mexico"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Enter Amount of US Dollars</td>
+            <td><input type="text" id="input" placeholder="Input Amount" onkeyup="checkValue()"></td>
+        </tr>
+    </table>
+    <p>
+        <a href="hw2_pt1.html">Part 1</a>
+        <a href="hw2_pt2.html">Part 2</a>
+    </p>
+    <p><a href="hw2.html">Home</a></p>
+  </body>
 </html>
