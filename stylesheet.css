@@ -68,3 +68,11 @@ header {
     border-radius: 6px;
     font-weight: bold;
 }
+
+.form-input {
+    text-align: end;
+}
+
+.grade-score {
+    text-align: end;
+}
