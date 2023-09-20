@@ -11,15 +11,19 @@ let inputs = []
 btnClear.addEventListener('click', () => {
     for (let x = 0; x < score.length; x++) {
         score[x].value = "";
-        textArea.innerText = "";
+        textArea.innerHTML = "";
         // textArea.style.visibility = "hidden";
     }
 })
 
-
 btnSubmit.addEventListener('click', () => {
     for (let x = 0; x < score.length; x++) {
-        if (Number.isInteger(+score[x].value) && score[x].value >= 0 && score[x].value <= 100) {
+        if (score[x].value === "") {
+            textArea.innerHTML = "Please input all grades"
+            inputs = []
+            break
+        }
+        if(Number.isInteger(parseInt(score[x].value)) && score[x].value >= 0 && score[x].value <= 100) {
             inputs.push(+score[x].value)
             if (inputs.length === score.length) {
                 calculateGrade()
@@ -28,6 +32,7 @@ btnSubmit.addEventListener('click', () => {
         }
         else {
             textArea.innerHTML = "Please input a valid grade";
+            console.log(inputs)
             inputs = []
             break
         }
