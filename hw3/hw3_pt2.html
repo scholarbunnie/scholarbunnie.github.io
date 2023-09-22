@@ -11,13 +11,13 @@
 <body>
     <header><h1>Homework 3 - Part 2</h1></header>
         <div class="hw3-pt2-container">
-            <form>
-                <p><label for="seller-name">Seller's Name </label><input type="text" id="name-input" placeholder="Name"></input></p>
+            <form id="commission-form">
+                <p><label for="seller-name">Seller's Name </label><input type="text" id="input-name" placeholder="Name"></input></p>
                 <p>For each item type the quantity sold by the seller</p>
-                <p><label for="items">Item 1 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
-                <p><label for="items">Item 2 </label><input type="text" class="input-qty" pattern="[0-9]" placeholder="Quantity"></p>
-                <p><label for="items">Item 3 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
-                <p><label for="items">Item 4 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
+                <p><label for="items">Item 1 </label><input type="number" class="input-qty form-input" placeholder="Quantity"></p>
+                <p><label for="items">Item 2 </label><input type="number" class="input-qty form-input" pattern="[0-9]" placeholder="Quantity"></p>
+                <p><label for="items">Item 3 </label><input type="number" class="input-qty form-input" placeholder="Quantity"></p>
+                <p><label for="items">Item 4 </label><input type="number" class="input-qty form-input" placeholder="Quantity"></p>
                 <p><input class="button" type="button" id="submit" value="Submit"><input class="button" type="button" id="clear" value="Clear Form"></p>
                 <table>
                     <tr>
@@ -28,35 +28,35 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>$20.99</td>
-                        <td><input readonly class="qty-sold"></td>
-                        <td><input readonly class="total-amt"></td>
+                        <td class="price-list">$20.99</td>
+                        <td><input readonly class="qty-sold output-align"></td>
+                        <td><input readonly class="total-cost output-align"></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>$12.75</td>
-                        <td><input readonly class="qty-sold"></td>
-                        <td><input readonly class="total-cost"></td>
+                        <td class="price-list">$12.75</td>
+                        <td><input readonly class="qty-sold output-align"></td>
+                        <td><input readonly class="total-cost output-align"></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>$9.95</td>
-                        <td><input readonly class="qty-sold"></td>
-                        <td><input readonly class="total-cost"></td>
+                        <td class="price-list">$9.95</td>
+                        <td><input readonly class="qty-sold output-align"></td>
+                        <td><input readonly class="total-cost output-align"></td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>$35.89</td>
-                        <td><input readonly class="qty-sold"></td>
-                        <td><input readonly class="total-cost"></td>
+                        <td class="price-list">$35.89</td>
+                        <td><input readonly class="qty-sold output-align"></td>
+                        <td><input readonly class="total-cost output-align"></td>
                     </tr>
                     <tr>
                         <td colspan="3">Total Amount Sold</td>
-                        <td><input readonly id="final-amt"></td>
+                        <td><input readonly class="output-align" id="final-amt"></td>
                     </tr>
                     <tr>
                         <td colspan="3">Total Weekly Earnings</td>
-                        <td><input readonly id="final-earnings"></td>
+                        <td><input readonly class="output-align" id="final-earnings"></td>
                     </tr>
                 </table>
             </form>
