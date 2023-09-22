@@ -5,20 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Homework 3 for Javascript/Ajax - Fall 2023 CIS 114">
     <link rel="stylesheet" href="../stylesheet.css">
+    <script src="hw3_pt2.js" defer></script>
     <title>Homework 3 - Part 2</title>
 </head>
 <body>
     <header><h1>Homework 3 - Part 2</h1></header>
         <div class="hw3-pt2-container">
             <form>
-                <p><label for="seller-name">Seller's Name </label><input type="text" placeholder="Name"></input></p>
+                <p><label for="seller-name">Seller's Name </label><input type="text" id="name-input" placeholder="Name"></input></p>
                 <p>For each item type the quantity sold by the seller</p>
-                <p><label for="items">Item 1 </label><input type="text" placeholder="Quantity"></p>
-                <p><label for="items">Item 2 </label><input type="text" placeholder="Quantity"></p>
-                <p><label for="items">Item 3 </label><input type="text" placeholder="Quantity"></p>
-                <p><label for="items">Item 3 </label><input type="text" placeholder="Quantity"></p>
-                <p><input class="button" type="button" id="submit" value="Submit"></p>
-                <p><input class="button" type="button" id="clear" value="Clear"></p>
+                <p><label for="items">Item 1 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
+                <p><label for="items">Item 2 </label><input type="text" class="input-qty" pattern="[0-9]" placeholder="Quantity"></p>
+                <p><label for="items">Item 3 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
+                <p><label for="items">Item 4 </label><input type="text" class="input-qty" placeholder="Quantity"></p>
+                <p><input class="button" type="button" id="submit" value="Submit"><input class="button" type="button" id="clear" value="Clear Form"></p>
+                <table>
+                    <tr>
+                        <th>Item #</th>
+                        <th>Price</th>
+                        <th>Qty Sold</th>
+                        <th>Total $</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>$20.99</td>
+                        <td><input readonly class="qty-sold"></td>
+                        <td><input readonly class="total-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>$12.75</td>
+                        <td><input readonly class="qty-sold"></td>
+                        <td><input readonly class="total-cost"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>$9.95</td>
+                        <td><input readonly class="qty-sold"></td>
+                        <td><input readonly class="total-cost"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>$35.89</td>
+                        <td><input readonly class="qty-sold"></td>
+                        <td><input readonly class="total-cost"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total Amount Sold</td>
+                        <td><input readonly id="final-amt"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total Weekly Earnings</td>
+                        <td><input readonly id="final-earnings"></td>
+                    </tr>
+                </table>
             </form>
         </div>
     <p><a href="hw3_pt1.html">Part 1</a>

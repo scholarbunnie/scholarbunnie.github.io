@@ -67,6 +67,7 @@ header {
     border: solid .3px rgb(255, 91, 233);
     border-radius: 6px;
     font-weight: bold;
+    margin: 10px;
 }
 
 .form-input {
