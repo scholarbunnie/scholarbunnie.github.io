@@ -1,4 +1,4 @@
-const commissionForm = document.querySelectorAll()
+const commissionForm = document.getElementById("commission-form")
 const clearForm = document.getElementById("clear")
 const submit = document.getElementById("submit")
 const inputName = document.getElementById("input-name")
@@ -34,26 +34,18 @@ for (let x = 0; x < inputQty.length; x++) {
 }
 
 clearForm.addEventListener("click", () => {
-    inputName.value = "";
-    finalAmt.value = ""
-    for (let x = 0; x < inputQty.length; x++) {
-        inputQty[x].value = "";
-        qtySold[x].value = "";
-        totalAmt[x].value = "";
-        totalCost[x].value = "";
-    }
+    commissionForm.reset();
 })
 
 submit.addEventListener("click", () => {
     if (inputName.value.length != 0) {
-        submitInput()
+        submitInput();
     }
     else {
-        inputName.placeholder = "Please Input a Name!"
-        inputName.classList.add("no-name")
+        inputName.placeholder = "Please Input a Name!";
+        inputName.classList.add("no-name");
     }
 })
-console.log(inputName.onfocus)
 
 inputName.onfocus = () => {
     inputName.classList.remove("no-name")

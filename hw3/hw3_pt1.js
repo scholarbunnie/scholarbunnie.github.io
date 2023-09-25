@@ -16,7 +16,27 @@ btnClear.addEventListener('click', () => {
     }
 })
 
+document.onkeydown = (e) => {
+    if (e.key === "Enter") {
+        if (btnClear.onfocus) {
+            btnClear.addEventListener('keydown', () => {
+                for (let x = 0; x < score.length; x++) {
+                    score[x].value = "";
+                    textArea.innerHTML = "";
+                }
+            });
+        }
+        else {
+            checkInput()
+        }
+    }
+}
+
 btnSubmit.addEventListener('click', () => {
+    checkInput()
+});
+
+function checkInput() {
     for (let x = 0; x < score.length; x++) {
         if (score[x].value === "") {
             textArea.innerHTML = "Please input all grades"
@@ -37,7 +57,7 @@ btnSubmit.addEventListener('click', () => {
             break
         }
     }
-});
+}
 
 function calculateGrade() {
     // textArea.style.visibility = "visible"
