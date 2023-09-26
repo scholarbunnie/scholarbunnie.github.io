@@ -11,7 +11,7 @@ let inputs = []
 btnClear.addEventListener('click', () => {
     for (let x = 0; x < score.length; x++) {
         score[x].value = "";
-        textArea.innerHTML = "";
+        textArea.innerHTML = "Please input your grades";
         // textArea.style.visibility = "hidden";
     }
 })
