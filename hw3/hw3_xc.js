@@ -3,10 +3,12 @@ const numDisplay = document.getElementById("times-text")
 const userInput = document.getElementById("user-input")
 const playAgain = document.getElementById("play-again")
 const submit = document.getElementById("submit")
+const inputLabel = document.getElementById("input-label")
 let x = Math.floor(Math.random() * 10)
 let y = Math.floor(Math.random() * 10)
 
 numDisplay.innerHTML = `${x} * ${y}`
+inputLabel.innerHTML = numDisplay.innerHTML
 
 userInput.onkeydown = (e) => {
     if (!((e.key >= 0 && e.key <= 9) || (e.key === "Tab") || (e.key === "Backspace") || (e.getModifierState("Control"))) || (e.key === " ")) {
@@ -36,6 +38,7 @@ playAgain.addEventListener("click", (e) => {
         y = Math.floor(Math.random() * 10)
         textDisplay.innerHTML = `How much is:`
         numDisplay.innerHTML = `${x} * ${y}`
+        inputLabel.innerHTML = numDisplay.innerHTML
         playAgain.style.display = "none"
         submit.style.display = "inline"
         userInput.value = ""

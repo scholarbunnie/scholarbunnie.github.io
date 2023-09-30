@@ -51,7 +51,7 @@ function checkInput() {
             }
         }
         else {
-            textArea.innerHTML = "Please input a valid grade";
+            textArea.innerHTML = "Please input a valid grade (0-100)";
             console.log(inputs)
             inputs = []
             break
