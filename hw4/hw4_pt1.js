@@ -52,7 +52,6 @@ function for_loop_answers(className) {
     }
 }
 
-
 //  Finds the product and sum using a while loop
 function while_loop_answers(className) {
     let x = 0
@@ -80,13 +79,4 @@ function while_loop_answers(className) {
     }
 }
 
-
 document.onload = for_loop_answers("for_loop_div"), while_loop_answers("while_loop_div")
-
-// For example, when presenting the results, you could show two lines such as:
-// The result of 5 * 9 * 13 * 17 * 21 * 25 is ....
-// The result of 5 + 9 + 13 + 17 + 21 + 25 is .... 
-
-// For example, when presenting the results, you could show two lines such as:
-// The result of 3 * 6 * 9 * 12 * 15 * 18 is ....
-// The result of 3 + 6 + 9 + 12 + 15 + 18 is ....
