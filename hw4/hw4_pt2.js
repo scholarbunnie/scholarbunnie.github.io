@@ -1,7 +1,27 @@
-// You will create a web page to show to interested clients how the compound interest works.
-
 // Below the heading you will code a script to show 3 tables with the calculation of compound interest on a principal of $1000.
+const tableDiv = document.getElementById("div-table")
+const startYear = 1
+const endYear = 5
+const minInterest = 5
+const maxInterest = 7
 
+// function will create a table for each interest rate
+// TODO create id for table for each of the interest rates
+// TODO look up foreach function
+function createTable(interest) {
+    const pTag = document.createElement("p")
+    const newTable = document.createElement("table")
+    tableDiv.appendChild(pTag).setAttribute("id", `${interest}% interest`)
+    pTag.appendChild(newTable)
+    for (let y = startYear; y <= endYear; y++) {
+        newTable.insertRow(y - 1).insertCell(0).innerHTML = `Year ${y}`
+    }
+
+}
+
+for (let x = minInterest; x <= maxInterest; x++) {
+    createTable(x)
+}
 // The first table will be for the interest rate of 5%
 // The second table will be for the interest rate of 6%
 // The third table will be for the interest rate of 7%
