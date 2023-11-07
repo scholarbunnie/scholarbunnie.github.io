@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homework 5 for Javascript/Ajax - Fall 2023 CIS 114">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <script src="hw5_pt1.js" defer></script>
+    <title>Homework 5 - Part 1</title>
+</head>
+<body>
+    <header><h1>Homework 5 - Part 1</h1></header>
+    <div id="output"></div>
+    <form id="form-info">
+        <p id="user-name"><label for="name">Name </label><input type="text" name="Name" id="name" placeholder="Name" autocomplete="off"></p>
+        <p><fieldset>
+            <legend>What is your age?</legend>
+            <div class="fieldset"><input type="radio" name="age"  id="less-than-21"  value="less-than-21"><label for="less-than-21">Less than 21</label><br>
+            <input type="radio" name="age" id="between-21-and-50" value="between-21-and-50"><label for="between-21-and-50">Between 21 and 50</label><br>
+            <input type="radio" name="age" id="older-than-50" value="older-than-50"><label for="older-than-50">Older than 50</label></div>
+        </fieldset></p>
+        <p><fieldset>
+            <legend>Browsers Used</legend>
+            <div class="fieldset"><input type="checkbox" name="browsers" id="firefox" value="firefox"><label for="firefox">Firefox</label><br>
+            <input type="checkbox" name="browsers" id="edge" value="edge"><label for="edge">Edge</label><br>
+            <input type="checkbox" name="browsers" id="chrome" value="chrome"><label for="chrome">Chrome</label><br>
+            <input type="checkbox" name="browsers" id="safari" value="safari"><label for="safari">Safari</label></div>
+        </fieldset></p>
+        <label for="movie-genres">Preferred Movie Genre </label>
+        <select name="movie-genres" id="movie-genres">
+            <option value="select">-- Select One --</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="documentary">Documentary</option>
+            <option value="science-fiction">Science Fiction</option>
+        </select>
+            <p><div><input type="button" class="button" id="submit" value="Submit"><input type="button" class="button" id="clear" value="Clear"></div></p>
+        </form>
+    <p><a href="hw5_pt2.html">Part 2</a>
+    <a href="hw5_pt3.html">Part 3</a></p>
+    <p><a href="../index.html">Home</a></p>
+</body>
+</html>

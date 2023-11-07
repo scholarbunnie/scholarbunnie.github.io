@@ -12,7 +12,6 @@ body {
     background-color: rgb(48, 48, 48);
 }
 
-
 table, th, td {
     border-color: white;
     border-collapse: collapse;
@@ -52,7 +51,7 @@ header {
         0 0 80px rgb(255, 91, 233); 
 }
 
-h2, h3 {
+h2, h3, legend, .label {
     color: #fff;
     text-shadow:
         0 0 2px #fff,
@@ -67,6 +66,15 @@ h2, h3 {
 
 h4 {
     color: #fff;
+}
+
+fieldset {
+    margin: auto;
+    max-width: 50%;
+}
+
+.fieldset {
+    text-align: left;
 }
 
 #times-text {
