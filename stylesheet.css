@@ -77,6 +77,19 @@ fieldset {
     text-align: left;
 }
 
+#output {
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 7px #fff,
+        /* 0 0 12px rgb(255, 91, 233),
+        0 0 22px rgb(255, 91, 233),
+        0 0 32px rgb(255, 91, 233), */
+        0 0 42px rgb(255, 91, 233),
+        0 0 54px rgb(255, 91, 233); 
+}
+
 #times-text {
     font-size: 4rem;
     line-height: 1.75em;
