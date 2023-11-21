@@ -77,6 +77,10 @@ fieldset {
     text-align: left;
 }
 
+.output-error {
+    color: #ff0000;
+}
+
 #output {
     color: #fff;
     text-shadow:
@@ -125,6 +129,10 @@ fieldset {
     margin: 10px;
 }
 
+.split-number{
+    margin: 5px;
+}
+
 #play-again {
     display: none;
 }
@@ -151,8 +159,4 @@ fieldset {
 .no-name {
     background-color: rgb(255, 196, 247);
     border-color: rgb(255, 91, 233);
-}
-
-/* .hw3-pt2-item {
-
 }
