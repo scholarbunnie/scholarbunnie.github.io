@@ -24,16 +24,15 @@ function textContainsChar() {
         output.innerHTML = `The letter ${character.value} was found ${numCharacters} time(s) in the text you provided.`
     }
     else {
-        // popupText.innerHTML = `Search character ${character.value} was not found in the content you typed`
         storyForm.reset()
         var popup = window.open("hw6_pt2_popup.html", "Error Window", "popup=true, width=300px, height=100px, left=100rem, bottom=300px")
-        popup.onload = function() {
-            popup.document.getElementById("popup-text").innerHTML = `Search character ${character.value} was not found in the content you typed`
-            if (close) {
-                close.addEventListener("click", () => {
-                    window.close()
-                })
-            }
-        }
+        var popupText = popup.document.getElementById("popup-text")
+        popupText.innerHTML = `Search character ${character.value} was not found in the content you typed`
+        popup.document.write(popupText)
+        // if (close) {
+        //     close.addEventListener("click", () => {
+        //         window.close()
+        //     })
+        // }
     }
 }
