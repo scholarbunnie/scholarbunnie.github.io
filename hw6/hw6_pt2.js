@@ -27,11 +27,13 @@ function textContainsChar() {
         // popupText.innerHTML = `Search character ${character.value} was not found in the content you typed`
         storyForm.reset()
         var popup = window.open("hw6_pt2_popup.html", "Error Window", "popup=true, width=300px, height=100px, left=100rem, bottom=300px")
-        popup.document.getElementById("popup-text").innerHTML = `Search character ${character.value} was not found in the content you typed`
-        if (close) {
-            close.addEventListener("click", () => {
-                window.close()
-            })
+        popup.onload = function() {
+            popup.document.getElementById("popup-text").innerHTML = `Search character ${character.value} was not found in the content you typed`
+            if (close) {
+                close.addEventListener("click", () => {
+                    window.close()
+                })
+            }
         }
     }
 }
