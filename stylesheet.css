@@ -160,3 +160,23 @@ fieldset {
     background-color: rgb(255, 196, 247);
     border-color: rgb(255, 91, 233);
 }
+
+#main-div {
+    max-width: fit-content;
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}

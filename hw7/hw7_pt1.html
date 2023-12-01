@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheet.css">
+    <script src="hw7_pt1.js" defer></script>
+    <title>Homework 7 - Part 1</title>
+</head>
+<body>
+    <header><h1>Homework 7 - Part 1</h1></header>
+    <div id="main-div">
+        <p style="color:white">“A person can learn a lot from a dog, even a loopy one like ours.”</h3></p>
+        <p>“Marley taught me about living each day with unbridled exuberance and joy, about seizing the moment and following your heart. He taught me to appreciate the simple things-a walk in the woods, a fresh snowfall, a nap in a shaft of winter sunlight. And as he grew old and achy, he taught me about optimism in the face of adversity. Mostly, he taught me about friendship and selflessness and, above all else, unwavering loyalty.”</p>
+        <p>- John Grogan's Marley and Me: Life and Love with the World's Worst Dog</p>
+    </div>
+    <form id="input-form">
+    <fieldset>
+        <legend>Choose a Background Color</legend>
+        <div class="fieldset">
+            <input type="radio" name="background" class="background-color-input" id="pink-background" value="pink-background"><label for="pink-background">Pink</label><br>
+            <input type="radio" name="background" class="background-color-input" id="black-background" value="black-background"><label for="black-background">Black</label><br>
+            <!-- <input type="radio" name="background" class="background-color-input" id="revert-background"><label for="revert-background">Revert</label><br> -->
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Choose your Text Styles</legend>
+        <div class="fieldset">
+            <input type="checkbox" class="text-style" name="text-style" id="bold" value="bold"><label for="bold">Bold</label><br>
+            <input type="checkbox" class="text-style" name="text-style" id="italics" value="italics"><label for="italics">Italics</label><br>
+            <input type="checkbox" class="text-style" name="text-style" id="underline" value="underline"><label for="underline">Underline</label><br>
+        </div>
+    </fieldset>
+    <label for="font-size">Select your Font Size </label>
+        <select name="font-size" id="font-size">
+            <option value="select">-- Select One --</option>
+            <option value=".5rem">.5rem</option>
+            <option value=".75rem">.75rem</option>
+            <option value="1rem">1rem</option>
+        </select>
+    </form>
+    <p><a href="hw7_pt2.html">Part 2</a></p>
+    <p><a href="../index.html">Home</a></p>
+</body>
+</html>
