@@ -10,9 +10,10 @@ let el = {
 }
 
 window.onload = checkCookie("name")
+console.log(el.pageCookies)
 
 el.submit.addEventListener("click", () => {
-    document.cookie = `name = ${el.personalName.value}; username = ${el.userName.value}`
+    el.pageCookies = `name = ${el.personalName.value}; username = ${el.userName.value}`
     checkCookie("name")
 })
 
@@ -21,7 +22,7 @@ el.clear.addEventListener("click", () => {
 })
 
 function checkCookie() {
-    if (document.cookie === null) {
+    if (el.pageCookies === null) {
         el.inputForm.style.visibility = "visible"
         el.greeting.innerHTML = ""
         el.greeting.style.visibility = "hidden"
@@ -39,8 +40,8 @@ function checkCookie() {
 function decodeCookie(cname) {
     // let decode = decodeURIComponent(el.pageCookies)
     let name = `${cname} = `
-    for (let x = 0; x < document.cookie.split(";").length; x++) {
-        let c = document.cookie.split("; ")[x]
+    for (let x = 0; x < el.pageCookies.split(";").length; x++) {
+        let c = el.pageCookies.split("; ")[x]
         if (c.indexOf(cname) === 0) {
             return c.substring(name.length, c.length)
     }
