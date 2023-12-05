@@ -9,7 +9,7 @@ let el = {
     pageCookies : $("cookie")
 }
 
-checkCookie("name")
+window.onload = checkCookie("name")
 
 el.submit.addEventListener("click", () => {
     el.pageCookies = `name = ${el.personalName.value}; username = ${el.userName.value}`
