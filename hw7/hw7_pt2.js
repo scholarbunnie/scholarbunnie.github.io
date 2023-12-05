@@ -6,39 +6,40 @@ let el = {
     userName : $("#username"),
     submit : $("#submit"),
     clear : $("#clear"),
-    pageCookies : $("cookie")
+    document.cookie : $("cookie")
 }
 
 window.onload = checkCookie("name")
+console.log)
 
-document.cookie.submit.addEventListener("click", () => {
-    document.cookie = `name = ${document.cookie.personalName.value}; username = ${document.cookie.userName.value}`
+el.submit.addEventListener("click", () => {
+    document.cookie = `name = ${el.personalName.value}; username = ${el.userName.value}`
     checkCookie("name")
 })
 
-document.cookie.clear.addEventListener("click", () => {
-    document.cookie.inputForm.reset()
+el.clear.addEventListener("click", () => {
+    el.inputForm.reset()
 })
 
 function checkCookie() {
     if (document.cookie === null) {
-        document.cookie.inputForm.style.visibility = "visible"
-        document.cookie.greeting.innerHTML = ""
-        document.cookie.greeting.style.visibility = "hidden"
+        el.inputForm.style.visibility = "visible"
+        el.greeting.innerHTML = ""
+        el.greeting.style.visibility = "hidden"
     }
     else {
         let name = decodeCookie("name")
         if (name != "" && name != null) {
-            document.cookie.inputForm.style.visibility = "hidden"
-            document.cookie.greeting.innerHTML = `Hello and Welcome Back ${name}!`
-            document.cookie.greeting.style.visibility = "visible"
+            el.inputForm.style.visibility = "hidden"
+            el.greeting.innerHTML = `Hello and Welcome Back ${name}!`
+            el.greeting.style.visibility = "visible"
         }
     }
 }
 
 function decodeCookie(cname) {
     // let decode = decodeURIComponent(el.pageCookies)
-    let name = `${cname} =`
+    let name = `${cname} = `
     for (let x = 0; x < document.cookie.split(";").length; x++) {
         let c = document.cookie.split("; ")[x]
         if (c.indexOf(cname) === 0) {
