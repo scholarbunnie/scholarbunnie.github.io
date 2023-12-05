@@ -10,7 +10,7 @@ let el = {
 }
 
 window.onload = checkCookie("name")
-console.log)
+console.log(document.cookie)
 
 el.submit.addEventListener("click", () => {
     document.cookie = `name = ${el.personalName.value}; username = ${el.userName.value}`
