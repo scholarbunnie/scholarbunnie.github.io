@@ -6,7 +6,7 @@ let el = {
     userName : $("#username"),
     submit : $("#submit"),
     clear : $("#clear"),
-    document.cookie : $("cookie")
+    pageCookies : $("cookie")
 }
 
 window.onload = checkCookie("name")
