@@ -39,7 +39,7 @@ function checkCookie() {
 
 function decodeCookie(cname) {
     // let decode = decodeURIComponent(el.pageCookies)
-    let name = `${cname} = `
+    let name = `${cname}=`
     for (let x = 0; x < document.cookie.split(";").length; x++) {
         let c = document.cookie.split("; ")[x]
         if (c.indexOf(cname) === 0) {
