@@ -6,10 +6,55 @@
     <meta name="description" content="Homework 8 for Fall 2023 CIS 114">
     <link rel="stylesheet" href="../stylesheet.css">
     <title>Homework 8</title>
-</head>
-<body>
-    <header><h2>Homework 8</h2></header>
-    <p>Coming Soon!</p>
-    <a href="../index.html">Back</a>
-</body>
-</html>
+    <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th,
+        td {
+          padding: 5px;
+        }
+      </style>
+      <title>Homework 8</title>
+    </head>
+    <body>
+      <header><h1>Homework 8 - AJAX Application</h1></header>
+  
+      <button type="button" class="button" onclick="loadDoc()">Get CD collection</button>
+      <br /><br />
+      <table id="demo"></table>
+  
+      <script>
+        function loadDoc() {
+          const xhttp = new XMLHttpRequest();
+          xhttp.onload = function () {
+            myFunction(this);
+          };
+          xhttp.open("GET", "cd_catalog.xml");
+          xhttp.send();
+        }
+        function myFunction(xml) {
+          const xmlDoc = xml.responseXML;
+          const x = xmlDoc.getElementsByTagName("CD");
+          let table = "<tr><th>Artist</th><th>Title</th></tr>";
+          for (let i = 0; i < x.length; i++) {
+            table +=
+              "<tr><td>" +
+              x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+          }
+          document.getElementById("demo").innerHTML = table;
+        }
+      </script>
+      <h3>Explanation of AJAX</h3>
+      <p>The button in the HTML document calls the function loadDoc() on click.  The function exchanges data with the server.  The property .onload happens when the "Get CD collection" button is clicked.  This calls myFunction() where the data is manipulated.  The .open property specifies the type of request, in this case "GET" and the .send property sends the request (used for "GET").</p>
+      <p>The JavaScript myFunction() is calling the XML document asynchronously using the .responseXML property.  This is a read only property.  Using the variable xmlDoc, we are now able to read the document and obtain data, in this case by using the tag name "CD".  The JS code then creates a table row with the Artist and Title of the album in a variable.  Using a for loop, the information from the XML document is appended to the table adding a new row.  To access this information the code uses the tag name and pulls the "ARTIST" and "TITLE".  Once the for loop has completed, the code calls the div "demo" and updates the innerHTML and adds the table variable.</p>
+      <h3>REST API</h3>
+      <p><a href="../index.html">Home</a></p>
+    </body>
+  </html>
