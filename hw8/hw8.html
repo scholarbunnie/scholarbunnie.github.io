@@ -54,6 +54,11 @@
       <p>The button in the HTML document calls the function loadDoc() on click.  The function exchanges data with the server.  The property .onload happens when the "Get CD collection" button is clicked.  This calls myFunction() where the data is manipulated.  The .open property specifies the type of request, in this case "GET" and the .send property sends the request (used for "GET").</p>
       <p>The JavaScript myFunction() is calling the XML document asynchronously using the .responseXML property.  This is a read only property.  Using the variable xmlDoc, we are now able to read the document and obtain data, in this case by using the tag name "CD".  The JS code then creates a table row with the Artist and Title of the album in a variable.  Using a for loop, the information from the XML document is appended to the table adding a new row.  To access this information the code uses the tag name and pulls the "ARTIST" and "TITLE".  Once the for loop has completed, the code calls the div "demo" and updates the innerHTML and adds the table variable.</p>
       <h3>REST API</h3>
+      <h4>SoundCloud API</h4>
+      <p>With SoundCloud API you can stream and share music from both indie and major artists alike.  Add this API to your application to take your user's music experience to the next level.  If you are a content creator, use this to engage your community and build a collective playlist!  Best part is the API is currently free to use!</p>
+      <p>The API uses JSONP, URI Query String/CRUD, and HTTP REST for it's Request format and XML, JSON, and JSONP for it's response format.  You will need to authenticate your app using OAuth 2.0.  This means you will not need to disclose your username or password to authenticate.</p>
+      <p>For more information and general FAQs on SoundCloud API please visit their <a href="https://developers.soundcloud.com/docs/api/guide">API Guide</a><br>
+      For more in depth information on how to implement the SoundCloud API please visit their <a href="https://developers.soundcloud.com/docs/api/explorer/open-api">API Specification</a> page.</p>
       <p><a href="../index.html">Home</a></p>
     </body>
   </html>
